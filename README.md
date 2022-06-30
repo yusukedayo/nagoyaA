@@ -1,25 +1,6 @@
-# README
+# メンバー自己紹介
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### つねみ　ゆうすけ
+チーム開発初めてでわくわくしてます！よろしくお願いします。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # nagoyaA
