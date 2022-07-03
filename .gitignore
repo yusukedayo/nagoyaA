@@ -39,5 +39,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-vendor/bundler
-config/database.yml
+/vendor/bundler
+/config/database.yml
