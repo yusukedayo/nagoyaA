@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
   def show; end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = current_user.recipes.build(recipe_params)
     if @recipe.save
       redirect_to root_path, success: 'レシピを作成しました'
     else
