@@ -9,22 +9,34 @@ class RecipesController < ApplicationController
   def show; end
 
   def create
-    @reciepe = Recipe.new(reciepe_params)
-    if @reciepe.save
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
       redirect_to root_path, success: 'レシピを作成しました'
     else
-      flash.now[:success] = '入力内容を見直してください'
+      flash.now[:error] = '入力内容を見直してください'
       render :new
     end
   end
 
-  def edit; end
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update
+      redirect_to root_path, success: 'レシピを更新しました'
+    else
+      flash.now[:error] = '入力内容を見直してください'
+      render :edit
+    end
+  end
 
   def destroy; end
 
   private
 
-  def reciepe_params
+  def recipe_params
     params.require(:reciepe).permit(:title, :content, :image)
   end
 end
