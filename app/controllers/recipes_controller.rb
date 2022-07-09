@@ -1,9 +1,10 @@
 class RecipesController < ApplicationController
   def index
+    @recipes = Recipe.all
   end
 
   def new
-    @reciepe = Recipe.new
+    @recipe = Recipe.new
   end
 
   def show; end
@@ -37,6 +38,6 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:reciepe).permit(:title, :content, :image)
+    params.require(:recipe).permit(:title, :content, :image)
   end
 end
