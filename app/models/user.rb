@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
+  validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
+  validates :email, uniqueness: true, presence: true
+  validates :name, presence: true
+end
+
   # いいね機能 ここから
   has_many :likes, dependent: :destroy
   has_many :like_recipes, through: :likes, source: :recipe
@@ -18,3 +23,4 @@ class User < ApplicationRecord
   end
   #ここまで
 end
+
