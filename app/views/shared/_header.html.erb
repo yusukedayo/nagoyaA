@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">ホーム</a>
+          <%= link_to 'ホーム', root_path, class: "nav-link active"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">レシピ作成</a>
+          <%= link_to 'レシピ作成', new_recipe_path, class: "nav-link active"%>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">ユーザーページ</a>
