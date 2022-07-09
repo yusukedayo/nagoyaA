@@ -4,7 +4,6 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
-end
 
   # いいね機能 ここから
   has_many :likes, dependent: :destroy
