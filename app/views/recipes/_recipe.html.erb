@@ -1,10 +1,9 @@
 <div class="col-sm-12 col-lg-4 mb-3">
     <div class="card">
-      <%= image_tag 'board_placeholder.png', class: 'card-img-top', size: '300x200' %>
       <div class="card-body">
         <h4 class="card-title">
           <a href="#">
-            <%= recip.title %>
+            <%= recipe.title %>
           </a>
         </h4>
         <div class='mr10 float-right'>
@@ -13,15 +12,13 @@
         </div>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <%= icon 'far', 'user' %>
-            <%= recip.user.name %>
+            <%= recipe.user.name %>
           </li>
           <li class="list-inline-item">
-            <%= icon 'far', 'calendar' %>
-            <%= recip.created_at %>
+            <%= recipe.created_at %>
           </li>
         </ul>
-        <p class="card-text"><%= recip.content %></p>
+        <p class="card-text"><%= recipe.content %></p>
       </div>
     </div>
 </div>

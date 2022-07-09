@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_recipes, through: :likes, source: :recipe
 
+  has_many :recipes
+
   def like(recipe)
     like_recipes << recipe
   end
