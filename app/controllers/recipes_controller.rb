@@ -32,7 +32,11 @@ class RecipesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to root_path, success: 'レシピを削除しました'
+  end
 
   private
 
