@@ -1,16 +1,14 @@
 
 
-<%= form_with model: @reciepe local: true do |f| %>
+<%= form_with model: @recipe, local: true do |f| %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-
   <div>
     <%= f.label :content %>
     <%= f.text_area :content %>
   </div>
-
   <div>
     <%= f.submit "作成" %>
   </div>
